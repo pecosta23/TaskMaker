@@ -10,6 +10,8 @@ export default function TaskCard({ name, onDelete }) {
   ])
   const [progress, setProgress] = useState(0)
 
+  const [progressColor, setProgressColor] = useState('bg-laranjaProgresso')
+
   useEffect(() => {
     const total = subtasks.length
     const done = subtasks.filter((s) => s.done).length
@@ -31,7 +33,14 @@ export default function TaskCard({ name, onDelete }) {
       <h2 className="text-2xl font-semibold mb-2">{name}</h2>
 
       {/* Barra de progresso */}
-      <ProgressBar progress={progress} />
+      <div className="flex gap-2 items-center mb-2">
+        <span className="text-sm">Cor da barra:</span>
+        <button onClick={() => setProgressColor('bg-laranjaProgresso')} className="w-5 h-5 rounded-full bg-laranjaProgresso border-2 border-white cursor-pointer" />
+        <button onClick={() => setProgressColor('bg-azulProgresso')} className="w-5 h-5 rounded-full bg-azulProgresso border-2 border-white cursor-pointer" />
+        <button onClick={() => setProgressColor('bg-verdeProgresso')} className="w-5 h-5 rounded-full bg-verdeProgresso border-2 border-white cursor-pointer" />
+      </div>
+      
+      <ProgressBar progress={progress} colorClass={progressColor}/>
       <p className="text-sm mt-2">Progresso: {progress}%</p>
 
       {/* Lista de subtarefas */}
