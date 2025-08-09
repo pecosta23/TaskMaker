@@ -5,8 +5,8 @@ import ProgressBar from './ProgressBar'
 
 export default function TaskCard({ name, onDelete }) {
   const [subtasks, setSubtasks] = useState([
-    { title: 'Subtarefa 1', done: false },
-    { title: 'Subtarefa 2', done: true },
+    { title: 'Tarefa não concluída', done: false },
+    { title: 'Tarefa concluída', done: true },
   ])
   const [progress, setProgress] = useState(0)
 

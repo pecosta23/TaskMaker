@@ -7,7 +7,7 @@ export default function ProgressBar({ progress }) {
   return (
     <div className="w-full h-3 bg-cinzaClaro rounded overflow-hidden">
       <motion.div
-        className="bg-verdeProgresso h-3 rounded"
+        className="bg-laranjaProgresso h-3 rounded"
         initial={{ width:0 }}
         animate={{ width: progressWidth}}
         transition={{ duration: 0.5, ease: `easeOut`}}

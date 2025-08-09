@@ -10,7 +10,7 @@ export default function SubtaskList({ subtasks, setSubtasks }) {
   }
 
   const addSubtask = () => {
-    setSubtasks([...subtasks, { title: 'Nova subtarefa', done: false }])
+    setSubtasks([...subtasks, { title: '', done: false }])
   }
 
   const updateSubtaskTitle = (index, value) => {
@@ -18,6 +18,11 @@ export default function SubtaskList({ subtasks, setSubtasks }) {
     updated[index].title = value
     setSubtasks(updated)
   } 
+
+  const deleteSubtask = (index) => {
+    const updated = subtasks.filter((_, i) => i !== index)
+    setSubtasks(updated)
+  }
 
   return (
     <div className="mt-4 space-y-2">
@@ -43,6 +48,13 @@ export default function SubtaskList({ subtasks, setSubtasks }) {
               sub.done ? 'line-through opcacity-60' : ''
             }`}
           />
+          <button
+          onClick={() => deleteSubtask(index)}
+          className="text-marrom hover:text-red-500 transition duration-200 ml-2"
+          title="Excluir subtarefa"
+          >
+            x
+          </button>
           </div>
         </motion.div>
       ))}
@@ -50,7 +62,7 @@ export default function SubtaskList({ subtasks, setSubtasks }) {
         className="mt-2 text-sm text-marrom underline hover:text-marrom font-medium"
         onClick={addSubtask}
       >
-        + Adicionar subtarefa
+        Adicionar subtarefa
       </button>
     </div>
   )

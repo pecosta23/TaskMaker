@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         creme: '#FDF6E3',
         marrom: '#3E2C24', // quase preto
-        verdeProgresso: '#1e8469ff',
+        laranjaProgresso: '#e36811ff',
         cinzaClaro: '#D9D9D9',
       },
     },
