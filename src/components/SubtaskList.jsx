@@ -58,12 +58,14 @@ export default function SubtaskList({ subtasks, setSubtasks }) {
           </div>
         </motion.div>
       ))}
-      <button
-        className="mt-2 text-sm text-marrom underline hover:text-marrom font-medium"
-        onClick={addSubtask}
-      >
-        Adicionar subtarefa
-      </button>
+      <div className="flex justify-center mt-4">
+        <button
+          className="bg-marrom text-creme px-4 py-2 rounded-full hover:bg-opacity-80 transition text-sm font-medium"
+          onClick={addSubtask}
+        >
+          Adicionar subtarefa
+        </button>
+      </div>
     </div>
   )
 }

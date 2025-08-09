@@ -28,14 +28,16 @@ export default function Home() {
   return (
     
     <div className="min-h-screen bg-creme p-6">
-      <header className="flex justify-center items-center mb-6 relative">
-        <h1 className="text-marrom text-3xl font-bold">Suas Tarefas</h1>
-        <button
-          className="ml-4 bg-marrom text-white w-8 h-8 rounded-full flex items-center justify-center text-xl font-bold hover:brightness-90"
-          onClick={addTask}
-        >
-          +
-        </button>
+      <header className="mb-6">
+        <div className="flex flex-col items-center gap-2">
+          <h1 className="text-marrom text-3xl font-bold">Suas Tarefas</h1>
+          <button
+            className="bg-marrom text-white px-4 py-2 rounded-full text-sm font-medium hover:brightness-90 transition"
+            onClick={addTask}
+          >
+            Criar Tarefa
+          </button>
+        </div>
       </header>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {tasks.map((task, index) => (
