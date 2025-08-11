@@ -12,6 +12,17 @@ export default function TaskCard({ name, onDelete }) {
 
   const [progressColor, setProgressColor] = useState('bg-laranjaProgresso')
 
+  const [tasks, setTasks] = useState([])
+
+  useEffect(() => {
+    const stored = localStorage.getItem('tasks')
+    if (stored) setTasks(JSON.parse(stored))
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+  }, [tasks])
+
   useEffect(() => {
     const total = subtasks.length
     const done = subtasks.filter((s) => s.done).length
