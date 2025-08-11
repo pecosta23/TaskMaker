@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        creme: '#FDF6E3',
-        marrom: '#3E2C24', // quase preto
+        creme: '#efede3',
+        marrom: '#302f2c', // quase preto
         laranjaProgresso: '#e36811ff',
         azulProgresso:'#11a0e3ff',
         verdeProgresso:'#35f02fff',
