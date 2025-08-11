@@ -24,6 +24,17 @@ export default function SubtaskList({ subtasks, setSubtasks }) {
     setSubtasks(updated)
   }
 
+  const [subtasks, setTasks] = useState([])
+
+  useEffect(() => {
+    const stored = localStorage.getItem('subtasks')
+    if (stored) setTasks(JSON.parse(stored))
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('subtasks', JSON.stringify(subtasks))
+  }, [tasks])
+  
   return (
     <div className="mt-4 space-y-2">
       {subtasks.map((sub, index) => (
