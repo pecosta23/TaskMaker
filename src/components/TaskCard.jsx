@@ -38,6 +38,7 @@ export default function TaskCard({ name, onDelete }) {
         <button onClick={() => setProgressColor('bg-laranjaProgresso')} className="w-5 h-5 rounded-full bg-laranjaProgresso border-2 border-white cursor-pointer" />
         <button onClick={() => setProgressColor('bg-azulProgresso')} className="w-5 h-5 rounded-full bg-azulProgresso border-2 border-white cursor-pointer" />
         <button onClick={() => setProgressColor('bg-verdeProgresso')} className="w-5 h-5 rounded-full bg-verdeProgresso border-2 border-white cursor-pointer" />
+        <button onClick={() => setProgressColor('bg-rosaProgresso')} className="w-5 h-5 rounded-full bg-rosaProgresso border-2 border-white cursor-pointer" />
       </div>
       
       <ProgressBar progress={progress} colorClass={progressColor}/>

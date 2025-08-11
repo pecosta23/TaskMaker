@@ -58,13 +58,18 @@ export default function SubtaskList({ subtasks, setSubtasks }) {
           </div>
         </motion.div>
       ))}
-      <div className="flex justify-center mt-4">
-        <button
+      <div className="flex justify-center mt-10">
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.1, ease: 'easeOut'}}
           className="bg-marrom text-creme px-4 py-2 rounded-full hover:bg-opacity-80 transition text-sm font-medium"
           onClick={addSubtask}
         >
           Adicionar subtarefa
-        </button>
+        </motion.button>
       </div>
     </div>
   )

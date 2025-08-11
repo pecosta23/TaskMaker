@@ -9,6 +9,7 @@ module.exports = {
         laranjaProgresso: '#e36811ff',
         azulProgresso:'#11a0e3ff',
         verdeProgresso:'#35f02fff',
+        rosaProgresso:'#eb2ebfff',
         cinzaClaro: '#D9D9D9',
       },
     },
