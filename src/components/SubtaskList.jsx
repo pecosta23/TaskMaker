@@ -1,5 +1,5 @@
 // src/components/SubtaskList.jsx
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 export default function SubtaskList({ subtasks, setSubtasks }) {
@@ -24,15 +24,15 @@ export default function SubtaskList({ subtasks, setSubtasks }) {
     setSubtasks(updated)
   }
 
-  const [subtasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState([])
 
   useEffect(() => {
-    const stored = localStorage.getItem('subtasks')
+    const stored = localStorage.getItem('tasks')
     if (stored) setTasks(JSON.parse(stored))
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('subtasks', JSON.stringify(subtasks))
+    localStorage.setItem('tasks', JSON.stringify(tasks))
   }, [tasks])
   
   return (
