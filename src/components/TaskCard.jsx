@@ -1,11 +1,10 @@
 // src/components/TaskCard.jsx
 import { useState, useEffect } from 'react'
-import SubtaskList from './SubtaskListFuncionando'
+import SubtaskList from './SubTaskList'
 import ProgressBar from './ProgressBar'
 
 export default function TaskCard({ name, onDelete }) {
   const [subtasks, setSubtasks] = useState([
-    { title: 'Tarefa não concluída', done: false },
     { title: 'Tarefa concluída', done: true },
   ])
   const [progress, setProgress] = useState(0)
