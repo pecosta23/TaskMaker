@@ -18,4 +18,4 @@ and get you a visual representation of your work getting complete
 
 # Access Task Maker
 
-https://task-maker-jade.vercel.app
+https://boranota.vercel.app
