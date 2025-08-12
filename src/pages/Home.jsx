@@ -35,7 +35,7 @@ export default function Home() {
     <div className="min-h-screen bg-creme p-6">
       <header className="mb-6">
         <div className="flex flex-col items-center gap-4">
-          <h1 className="text-marrom text-3xl font-bold">Labra Task</h1>
+          <h1 className="text-marrom text-3xl font-bold">Bora Nota</h1>
           {!showInput ? (
             <motion.button
               whileHover={{ scale: 1.30 }}
