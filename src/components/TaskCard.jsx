@@ -1,6 +1,6 @@
 // src/components/TaskCard.jsx
 import { useState, useEffect } from 'react'
-import SubtaskList from './SubtaskList'
+import SubtaskList from './SubtaskListFuncionando'
 import ProgressBar from './ProgressBar'
 
 export default function TaskCard({ name, onDelete }) {

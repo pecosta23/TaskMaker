@@ -2,20 +2,12 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
-export default function SubtaskList({ taskId, subtasks, setSubtasks }) {
-  // Carrega subtasks existentes dessa task
-  useEffect(() => {
-    try {
-      const raw = localStorage.getItem(`task:${taskId}:subtasks`)
-      if (raw) setSubtasks(JSON.parse(raw))
-    } catch {}
-  }, [taskId])
-
-  // Persiste sempre que mudar
-  useEffect(() => {
-    localStorage.setItem(`task:${taskId}:subtasks`, JSON.stringify(subtasks))
-  }, [taskId, subtasks])
-
+export default function SubtaskList({ subtasks, setSubtasks }) {
+  const toggleSubtask = (index) => {
+    const updated = [...subtasks]
+    updated[index].done = !updated[index].done
+    setSubtasks(updated)
+  }
 
   const addSubtask = () => {
     setSubtasks([...subtasks, { title: '', done: false }])
