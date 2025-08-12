@@ -18,4 +18,3 @@ and get you a visual representation of your work getting complete
 
 # Access Task Maker
 
-https://boranota.vercel.app
