@@ -54,8 +54,8 @@ export default function Home() {
                   type="text"
                   value={newTaskName}
                   onChange={(e) => setNewTaskName(e.target.value)}
-                  placeholder="   Dê um nome a uma nova tarefa"
-                  className="px-4 py-2 rounded-full border border-CinzaClaro bg-creme text-marrom placeholder-marrom outline-none w-64 text-sm"
+                  placeholder="    Digite o nome da nova tarefa"
+                  className="px-4 py-2 rounded-full border border-CinzaClaro bg-marrom text-white placeholder-creme outline-none w-64 text-sm"
                   />
                   <div className="flex gap-3">
                     <motion.button
