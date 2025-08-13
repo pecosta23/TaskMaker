@@ -5,16 +5,22 @@ import { motion } from 'framer-motion'
 export default function SubtaskList({ taskId, subtasks, setSubtasks }) {
   // Carrega subtasks do localStorage
   useEffect(() => {
+    if(!taskId) return
     try {
       const raw = localStorage.getItem(`task:${taskId}:subtasks`)
-      if (raw) setSubtasks(JSON.parse(raw))
+      if (raw) {
+        setSubtasks(JSON.parse(raw))
+      } else {
+        setSubtasks([])
+      }
     } catch {
       setSubtasks([])
     }
-  }, [taskId])
+  }, [taskId, setSubtasks])
 
-  // Persiste subtasks no localStorage sempre que mudam
+  // Persiste subtasks por tarefa
   useEffect(() => {
+    if (!taskId) return
     localStorage.setItem(`task:${taskId}:subtasks`, JSON.stringify(subtasks))
   }, [taskId, subtasks])
 

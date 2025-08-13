@@ -3,12 +3,9 @@ import { useState, useEffect } from 'react'
 import SubtaskList from './SubtaskList'
 import ProgressBar from './ProgressBar'
 
-export default function TaskCard({ name, onDelete }) {
-  const [subtasks, setSubtasks] = useState([
-    { title: 'Tarefa concluída', done: true },
-  ])
+export default function TaskCard({ taskId, name, onDelete }) {
+  const [subtasks, setSubtasks] = useState([])
   const [progress, setProgress] = useState(0)
-
   const [progressColor, setProgressColor] = useState('bg-laranjaProgresso')
 
   useEffect(() => {
@@ -44,7 +41,7 @@ export default function TaskCard({ name, onDelete }) {
       <p className="text-sm mt-2">Progresso: {progress}%</p>
 
       {/* Lista de subtarefas */}
-      <SubtaskList subtasks={subtasks} setSubtasks={setSubtasks} />
+      <SubtaskList taskId={taskId} subtasks={subtasks} setSubtasks={setSubtasks} />
     </div>
   )
 }

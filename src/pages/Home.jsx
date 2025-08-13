@@ -29,6 +29,7 @@ export default function Home() {
 
   const removeTask = (idToRemove) => {
     setTasks(tasks.filter((t) => t.id !== idToRemove))
+    localStorage.removeItem(`task:${idToRemove}:subtasks`)
   }
 
   return (
@@ -115,6 +116,7 @@ export default function Home() {
               style={{ transformOrigin: 'top center'}}
             >
               <TaskCard
+                taskId={task.id}
                 name={task.name}
                 onDelete={() => removeTask(task.id)}
                 />
