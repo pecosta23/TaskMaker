@@ -8,11 +8,25 @@ export default function TaskCard({ taskId, name, onDelete }) {
   const [progress, setProgress] = useState(0)
   const [progressColor, setProgressColor] = useState('bg-laranjaProgresso')
 
+  // recalcula progresso quando as substaks mudam
   useEffect(() => {
     const total = subtasks.length
     const done = subtasks.filter((s) => s.done).length
     setProgress(total ? Math.round((done / total) * 100) : 0)
   }, [subtasks])
+
+  // carrega a cor salva para a tarefa
+  useEffect(() => {
+    if(!taskId) return
+    const saved = localStorage.getItem(`task:${taskId}:color`)
+    if (saved) setProgressColor(saved)
+  }, [taskId])
+
+  // salva a acor sempre que mudar
+  useEffect(() => {
+    if (!taskId) return
+    localStorage.setItem(`task:${taskId}:color`, progressColor)
+  }, [taskId, progressColor])
 
   return (
     <div className="relative bg-gradient-to-br from-[#FBF6EC] to-[#F2E9DC] text-marrom p-5 rounded-xl shadow-lg border border-cinzaClaro">
