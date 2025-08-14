@@ -33,7 +33,7 @@ export default function Home() {
 
     const result = await Swal.fire({
       title: 'Confirmar exclusão?',
-      text: `A lista "${taskName}" e todas as subtarefas serão apagadas.`,
+      text: `A lista "${taskName}" e todas as suas subtarefas serão apagadas.`,
       icon: 'warning',
       showCancelButton: true,
       buttonsStyling: false,
