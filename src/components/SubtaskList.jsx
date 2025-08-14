@@ -85,7 +85,7 @@ export default function SubtaskList({ taskId, subtasks, setSubtasks }) {
                       boxShadow: snapshot.isDragging ? '0 4px 12px rgba(0,0,0,0.2)' : 'none',
                       background: snapshot.isDragging ? '#fd7e3' : '', // muda a cor durante o arrasto
                     }}
-                    className="flex items-center justify-between bg-creme px-3 py-2 rounded border border-cinzaClaro cursor-grab"
+                    className="flex items-center justify-between bg-creme px-3 py-2 rounded border border-cinzaEscuro cursor-grab"
                   >
                     <div className="flex items-center gap-2 w-full">
                       <input
@@ -126,7 +126,7 @@ export default function SubtaskList({ taskId, subtasks, setSubtasks }) {
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.1, ease: 'easeOut'}}
-          className="bg-marrom text-creme px-4 py-2 rounded-full hover:bg-opacity-80 transition text-sm font-medium"
+          className="bg-marrom text-white px-4 py-2 rounded-full hover:bg-opacity-80 transition text-sm font-medium"
           onClick={addSubtask}
         >
           Adicionar subtarefa

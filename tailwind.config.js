@@ -4,13 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        creme: '#efede3',
+        creme: '#e3dbc8ff',
         marrom: '#302f2c', // quase preto
         laranjaProgresso: '#e36811ff',
         azulProgresso:'#11a0e3ff',
         verdeProgresso:'#35f02fff',
         rosaProgresso:'#eb2ebfff',
-        cinzaClaro: '#D9D9D9',
+        cinzaEscuro: '#666464ff',
+        cinzaClaro: '#c2c2c2ff'
       },
     },
   },

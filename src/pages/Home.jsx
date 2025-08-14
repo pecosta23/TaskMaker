@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import TaskCard from '../components/TaskCard'
+import Swal from 'sweetalert2'
 
 export default function Home() {
 
@@ -27,9 +28,30 @@ export default function Home() {
     }
   }
 
-  const removeTask = (idToRemove) => {
-    setTasks(tasks.filter((t) => t.id !== idToRemove))
+  const removeTask = async (idToRemove) => {
+    const taskName = tasks.find(t => t.id === idToRemove)?.name || 'esta lista'
+
+    const result = await Swal.fire({
+      title: 'Confirmar exclusão?',
+      text: `A lista "${taskName}" e todas as subtarefas serão apagadas.`,
+      icon: 'warning',
+      showCancelButton: true,
+      buttonsStyling: false,
+      customClass: {
+        icon: 'swal-icon-warning',
+        popup: 'swal-popup-custom',
+        confirmButton: 'swal-btn swal-btn-confirm',
+        cancelButton: 'swal-btn swal-btn-cancel',
+        actions: 'swal-btn-actions'
+      }, 
+      confirmButtonText: 'Sim, apagar',
+      cancelButtonText: 'Cancelar'
+    })
+    if (!result.isConfirmed) return
+
+    setTasks((tasks) => tasks.filter((t) => t.id !== idToRemove))
     localStorage.removeItem(`task:${idToRemove}:subtasks`)
+    localStorage.removeItem(`task:${idToRemove}:color`)
   }
 
   return (
@@ -55,8 +77,8 @@ export default function Home() {
                   type="text"
                   value={newTaskName}
                   onChange={(e) => setNewTaskName(e.target.value)}
-                  placeholder="    Digite o nome da nova tarefa"
-                  className="px-4 py-2 rounded-full border border-CinzaClaro bg-marrom text-white placeholder-creme outline-none w-64 text-sm"
+                  placeholder="Digite o nome da nova tarefa"
+                  className="px-6 py-2 rounded-full border border-cinzaEscuro bg-marrom text-white placeholder-creme outline-none w-60 text-sm"
                   />
                   <div className="flex gap-3">
                     <motion.button
@@ -77,7 +99,7 @@ export default function Home() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.1, ease: 'easeOut'}}
                       onClick={() => {setShowInput(false); setNewTaskName('')}}
-                      className="px-4 py-2 rounded-full text-sm font-medium text-marrom border border-cinzaClaro hover:bg-creme transition"
+                      className="px-4 py-2 rounded-full text-sm font-medium text-marrom border border-cinzaEscuro hover:bg-creme transition"
                     >
                       Cancelar
                     </motion.button>

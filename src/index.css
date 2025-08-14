@@ -1,8 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind apply;
 
-body {
-  background-color: #E6DDCC; /* tom beje mais escuro */
-  color: #3E2C24;
+
+
+.swal-btn-actions {
+  display: flex; 
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.swal-btn {
+  @apply px-4 py-2 rounded-full font-medium text-white cursor-pointer transition;
+}
+
+.swal-btn-confirm {
+  @apply bg-red-600 hover:bg-red-700;
+}
+
+.swal-btn-cancel {
+  @apply bg-blue-600 hover:bg-blue-700;
+}
+
+.swal-popup-custom {
+  @apply bg-white;
+}
+
+.swal2-icon.swal2-warning {
+  border-color: #facc15 !important;
+  color: #facc15 !important;
 }
