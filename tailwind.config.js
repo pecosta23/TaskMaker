@@ -14,7 +14,9 @@ module.exports = {
         cinzaEscuro: '#666464ff',
         cinzaClaro: '#c2c2c2ff',
         taskCardDarkDe: '#58544cff',
-        taskCardDarkAte: '#473e3eff'
+        taskCardDarkAte: '#473e3eff',
+        taskCardLightDe: '#f4f0dfff',
+        taskCardLightAte: '#e7d7bdff'
       },
     },
   },

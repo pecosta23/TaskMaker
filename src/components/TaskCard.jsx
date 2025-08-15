@@ -29,7 +29,7 @@ export default function TaskCard({ taskId, name, onDelete }) {
   }, [taskId, progressColor])
 
   return (
-    <div className="relative bg-gradient-to-br from-[#FBF6EC] to-[#F2E9DC] dark:from-taskCardDarkDe dark:to-taskCardDarkAte text-marrom dark:text-creme p-5 rounded-xl shadow-lg border border-cinzaEscuro dark:cinzaEscuro dark:border-[#2a2a28]">
+    <div className="relative bg-gradient-to-br from-taskCardLightDe to-taskCardLightAte dark:from-taskCardDarkDe dark:to-taskCardDarkAte text-marrom dark:text-creme p-5 rounded-xl shadow-lg border border-cinzaEscuro dark:cinzaEscuro dark:border-cinzaEscuro">
       {/* Botão de lixeira */}
       <button
         className="absolute right-3 top-3 text-marrom hover:text-red-500"
@@ -45,10 +45,10 @@ export default function TaskCard({ taskId, name, onDelete }) {
       {/* Barra de progresso */}
       <div className="flex gap-2 items-center mb-2">
         <span className="text-sm">Cor da barra:</span>
-        <button onClick={() => setProgressColor('bg-laranjaProgresso')} className="w-5 h-5 rounded-full bg-laranjaProgresso border-2 border-white cursor-pointer" />
-        <button onClick={() => setProgressColor('bg-azulProgresso')} className="w-5 h-5 rounded-full bg-azulProgresso border-2 border-white cursor-pointer" />
-        <button onClick={() => setProgressColor('bg-verdeProgresso')} className="w-5 h-5 rounded-full bg-verdeProgresso border-2 border-white cursor-pointer" />
-        <button onClick={() => setProgressColor('bg-rosaProgresso')} className="w-5 h-5 rounded-full bg-rosaProgresso border-2 border-white cursor-pointer" />
+        <button onClick={() => setProgressColor('bg-laranjaProgresso')} className="w-5 h-5 rounded-full bg-laranjaProgresso border-2 border-white cursor-pointer dark:border-creme" />
+        <button onClick={() => setProgressColor('bg-azulProgresso')} className="w-5 h-5 rounded-full bg-azulProgresso border-2 border-white cursor-pointer dark:border-creme" />
+        <button onClick={() => setProgressColor('bg-verdeProgresso')} className="w-5 h-5 rounded-full bg-verdeProgresso border-2 border-white cursor-pointer dark:border-creme" />
+        <button onClick={() => setProgressColor('bg-rosaProgresso')} className="w-5 h-5 rounded-full bg-rosaProgresso border-2 border-white cursor-pointer dark:border-creme" />
       </div>
       
       <ProgressBar progress={progress} colorClass={progressColor}/>
