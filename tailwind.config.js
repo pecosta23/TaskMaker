@@ -16,7 +16,7 @@ module.exports = {
         taskCardDarkDe: '#58544cff',
         taskCardDarkAte: '#473e3eff',
         taskCardLightDe: '#f4f0dfff',
-        taskCardLightAte: '#e7d7bdff'
+        taskCardLightAte: '#e8dbc6ff'
       },
     },
   },
