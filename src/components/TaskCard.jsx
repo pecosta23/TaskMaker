@@ -29,7 +29,7 @@ export default function TaskCard({ taskId, name, onDelete }) {
   }, [taskId, progressColor])
 
   return (
-    <div className="relative bg-gradient-to-br from-[#FBF6EC] to-[#F2E9DC] dark:from-[#1c1b1a] dark:to-[#151413] text-marrom dark:text-creme p-5 rounded-xl shadow-lg border border-cinzaEscuro dark:cinzaEscuro dark:border-[#2a2a28]">
+    <div className="relative bg-gradient-to-br from-[#FBF6EC] to-[#F2E9DC] dark:from-taskCardDarkDe dark:to-taskCardDarkAte text-marrom dark:text-creme p-5 rounded-xl shadow-lg border border-cinzaEscuro dark:cinzaEscuro dark:border-[#2a2a28]">
       {/* Botão de lixeira */}
       <button
         className="absolute right-3 top-3 text-marrom hover:text-red-500"

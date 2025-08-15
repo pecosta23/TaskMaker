@@ -25,7 +25,7 @@ export default function ThemeToggle() {
                                 ? 'bg-marrom text-white border-marrom'
                                 : 'bg-transparent text-marrom border-cinzaEscuro hover:bg-creme'
                             }
-                            dark:${active ? 'bg-white text-marrom border-white' : 'text-creme border-cinzaClaro hover:bg-[#2a2a2a]'}
+                            dark:${active ? 'bg-white text-marrom border-marrom' : 'text-creme border-cinzaClaro hover:bg-[#2a2a2a]'}
                             `}
                         title={opt.label}
                     >

@@ -12,7 +12,9 @@ module.exports = {
         verdeProgresso:'#35f02fff',
         rosaProgresso:'#eb2ebfff',
         cinzaEscuro: '#666464ff',
-        cinzaClaro: '#c2c2c2ff'
+        cinzaClaro: '#c2c2c2ff',
+        taskCardDarkDe: '#58544cff',
+        taskCardDarkAte: '#473e3eff'
       },
     },
   },

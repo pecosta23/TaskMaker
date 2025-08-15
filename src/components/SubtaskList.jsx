@@ -92,7 +92,7 @@ export default function SubtaskList({ taskId, subtasks, setSubtasks }) {
                         type="checkbox"
                         checked={sub.done}
                         onChange={() => toggleSubtask(sub.id)}
-                        className="appearance-none w-4 h-4 border-2 border-marrom rounded-full checked:bg-marrom checked:border-marrom cursor-pointer transition duration-200"
+                        className="appearance-none w-4 h-4 border-2 border-marrom rounded-full dark:checked:bg-creme dark:border-creme checked:bg-marrom checked:border-marrom cursor-pointer transition duration-200"
                       />
                       <input
                         value={sub.title}
