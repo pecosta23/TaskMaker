@@ -103,7 +103,7 @@ export default function SubtaskList({ taskId, subtasks, setSubtasks }) {
                       />
                       <button
                         onClick={() => deleteSubtask(sub.id)}
-                        className="text-marrom hover:text-red-500 transition duration-200 ml-2"
+                        className="text-marrom hover:text-red-500 transition dark:text-creme dark:hover:text-red-500 duration-200 ml-2"
                         title="Excluir subtarefa"
                       >
                         <b>x</b>
@@ -126,7 +126,7 @@ export default function SubtaskList({ taskId, subtasks, setSubtasks }) {
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.1, ease: 'easeOut'}}
-          className="bg-marrom text-white px-4 py-2 rounded-full hover:bg-opacity-80 transition text-sm font-medium"
+          className="bg-marrom text-creme px-4 py-2 rounded-full hover:bg-opacity-80 transition text-sm font-medium"
           onClick={addSubtask}
         >
           Adicionar subtarefa

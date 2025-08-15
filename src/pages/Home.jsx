@@ -56,7 +56,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-creme text-marrom dark:bg-[#12110f] dark:text-creme p-6">
+    <div className="min-h-screen bg-creme text-marrom dark:bg-bgDarkHome dark:text-creme p-6">
       <header className={`mb-7 ${tasks.length === 0 ? "flex flex-col items-center justify-center min-h-screen" : ""}`}>
         <div className="flex flex-col items-center gap-4">
           <h1 className="text-marrom dark:text-creme text-3xl font-bold">Bora Nota</h1>
@@ -68,7 +68,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.1, ease: 'easeOut'}}
-              className="bg-marrom text-white px-4 py-2 rounded-full text-sm font-medium hover:brightness-90 transition"
+              className="bg-marrom text-creme px-4 py-2 rounded-full text-sm font-medium hover:brightness-90 transition"
               onClick={() => setShowInput(true)}
             >
               Criar Tarefa
@@ -80,7 +80,7 @@ export default function Home() {
                 value={newTaskName}
                 onChange={(e) => setNewTaskName(e.target.value)}
                 placeholder="Digite o nome da nova tarefa"
-                className="px-6 py-2 rounded-full border border-cinzaEscuro bg-marrom text-white placeholder-creme outline-none w-60 text-sm"
+                className="px-6 py-2 rounded-full border border-cinzaEscuro bg-marrom text-creme placeholder-creme outline-none w-60 text-sm"
               />
               <div className="flex gap-3">
                 <motion.button
@@ -89,7 +89,7 @@ export default function Home() {
                   initial={{ opacity: 0, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.1, ease: 'easeOut'}}
-                  className="bg-marrom text-white px-4 py-2 rounded-full text-sm font-medium hover:brightness-90 hover:bg-opacity-80 transition"
+                  className="bg-marrom text-creme px-4 py-2 rounded-full text-sm font-medium hover:brightness-90 hover:bg-opacity-80 transition"
                   onClick={handleCreateTask}
                 >
                   Adicionar
@@ -101,7 +101,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.1, ease: 'easeOut'}}
                   onClick={() => {setShowInput(false); setNewTaskName('')}}
-                  className="px-4 py-2 rounded-full text-sm font-medium text-marrom border border-cinzaEscuro hover:bg-creme transition"
+                  className="px-4 py-2 rounded-full text-sm font-medium text-marrom border dark:text-creme dark:hover:bg-bgDarkHome border-cinzaEscuro hover:bg-creme transition"
                 >
                   Cancelar
                 </motion.button>
