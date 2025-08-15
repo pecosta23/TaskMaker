@@ -85,7 +85,7 @@ export default function SubtaskList({ taskId, subtasks, setSubtasks }) {
                       boxShadow: snapshot.isDragging ? '0 4px 12px rgba(0,0,0,0.2)' : 'none',
                       background: snapshot.isDragging ? '#fd7e3' : '', // muda a cor durante o arrasto
                     }}
-                    className="flex items-center justify-between bg-creme px-3 py-2 rounded border border-cinzaEscuro cursor-grab"
+                    className="flex items-center justify-between bg-creme dark:bg-[#1c1b1a] px-3 py-2 rounded border border-cinzaEscuro dark:border-[#2a2a28] cursor-grab"
                   >
                     <div className="flex items-center gap-2 w-full">
                       <input
@@ -97,7 +97,7 @@ export default function SubtaskList({ taskId, subtasks, setSubtasks }) {
                       <input
                         value={sub.title}
                         onChange={(e) => updateSubtaskTitle(sub.id, e.target.value)}
-                        className={`bg-transparent text-marrom w-full outline-none ${
+                        className={`bg-transparent text-marrom dark:text-creme w-full outline-none ${
                           sub.done ? 'line-through opacity-60' : ''
                         }`}
                       />

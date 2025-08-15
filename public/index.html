@@ -5,6 +5,16 @@
     <link rel="icon" type="image/ico" sizes="64x64" href="%PUBLIC_URL%/favicon_dog.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <script>
+      (function () {
+        try { 
+          var key = 'theme-preference';
+          var pref = localStorage.getItem(key) || 'system';
+          var isDark = pref === 'dark' || (pref === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
     <meta
       name="description"
       content="Web site created using create-react-app"

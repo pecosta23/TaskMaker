@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import TaskCard from '../components/TaskCard'
 import Swal from 'sweetalert2'
+import ThemeToggle from '../components/ThemeToggle'
 
 export default function Home() {
 
@@ -55,10 +56,11 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-creme p-6">
+    <div className="min-h-screen bg-creme text-marrom dark:bg-[#12110f] dark:text-creme p-6">
       <header className="mb-6">
         <div className="flex flex-col items-center gap-4">
-          <h1 className="text-marrom text-3xl font-bold">Bora Nota</h1>
+          <h1 className="text-marrom dark:text-creme text-3xl font-bold">Bora Nota</h1>
+          <ThemeToggle />
           {!showInput ? (
             <motion.button
               whileHover={{ scale: 1.30 }}
