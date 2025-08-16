@@ -22,7 +22,7 @@ export default function ClockPill() {
     return (
         <motion.div
             initial={{ width: 40 }}
-            animate={{ width: isOpen ? 170 : 40 }}
+            animate={{ width: isOpen ? 210 : 40 }}
             transition={{ type: "spring", stiffness: 300, damping: 25}}
             className="fixed top-4 left-4 flex items-center rounded-full bg-clockPillLight text-marrom 
                         dark:bg-marrom dark:text-creme shadow-md overflow-hidden cursor-pointer select-none"
