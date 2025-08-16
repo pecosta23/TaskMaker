@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import TaskCard from '../components/TaskCard'
 import Swal from 'sweetalert2'
 import ThemeToggle from '../components/ThemeToggle'
+import ClockPill from '../components/ClockPill'
 
 export default function Home() {
 
@@ -61,6 +62,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-4">
           <h1 className="text-marrom dark:text-creme text-3xl font-bold">Bora Nota</h1>
           <ThemeToggle />
+          <ClockPill />
           {!showInput ? (
             <motion.button
               whileHover={{ scale: 1.30 }}
