@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         creme: '#e3dbc8ff',
-        marrom: '#302f2c', // quase preto
+        marrom: '#2e2d2bff', // quase preto
         laranjaProgresso: '#e36811ff',
         azulProgresso:'#11a0e3ff',
         verdeProgresso:'#35f02fff',
@@ -19,7 +19,7 @@ module.exports = {
         taskCardLightAte: '#e9decdff',
         bgDarkHome: '#3d3737ff',
         darkProgressBar: '#3a3835ff',
-        clockPillLight: '#e9decdff'
+        clockPillLight: '#f5e9d8ff'
       },
     },
   },
