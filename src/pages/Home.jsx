@@ -61,7 +61,7 @@ export default function Home() {
       <ClockPill />
       <header className={`mb-7 ${tasks.length === 0 ? "flex flex-col items-center justify-center min-h-screen" : ""}`}>
         <div className="flex flex-col items-center gap-4">
-          <h1 className="text-marrom dark:text-creme text-3xl font-bold">Bora Nota</h1>
+          <h1 className="text-marrom dark:text-creme text-3xl font-bold mt-10">Bora Nota</h1>
           <ThemeToggle />
           {!showInput ? (
             <motion.button
