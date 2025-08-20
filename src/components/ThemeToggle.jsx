@@ -17,7 +17,7 @@ export default function ThemePill() {
   return (
     <motion.div
       initial={{ width: 40 }}
-      animate={{ width: isOpen ? 190 : 40 }}
+      animate={{ width: isOpen ? 200 : 40 }}
       transition={{ type: "spring", stiffness: 300, damping: 25 }}
       className="fixed top-4 right-6 flex flex-row-reverse items-center rounded-full 
                  bg-themePillLight text-marrom dark:bg-marrom dark:text-creme 
