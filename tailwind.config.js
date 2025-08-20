@@ -19,7 +19,8 @@ module.exports = {
         taskCardLightAte: '#e9decdff',
         bgDarkHome: '#3d3737ff',
         darkProgressBar: '#3a3835ff',
-        clockPillLight: '#f5e9d8ff'
+        clockPillLight: '#f5e9d8ff',
+        themePillLight: 'f5e9d8ff',
       },
     },
   },

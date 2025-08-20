@@ -59,10 +59,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-creme text-marrom dark:bg-bgDarkHome dark:text-creme p-6">
       <ClockPill />
+      <ThemeToggle />
       <header className={`mb-7 ${tasks.length === 0 ? "flex flex-col items-center justify-center min-h-screen" : ""}`}>
         <div className="flex flex-col items-center gap-4">
           <h1 className="text-marrom dark:text-creme text-3xl font-bold mt-10">Bora Nota</h1>
-          <ThemeToggle />
           {!showInput ? (
             <motion.button
               whileHover={{ scale: 1.30 }}
