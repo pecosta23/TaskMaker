@@ -39,7 +39,7 @@ export default function ClockPill() {
                         animate={{ x: 40, opacity: 1}}
                         exit={{ x: 40, opacity: 0}}
                         transition={{ duration: 0.3 }}
-                        className="ml-1 mr-3 font-medium hidden sm:inline"
+                        className="ml-1 mr-3 font-medium sm:inline"
                         >
                             {time}
                         </motion.span>
