@@ -51,7 +51,7 @@ export default function ThemePill() {
                   className={`px-2 py-1 rounded-full text-sm border transition
                     ${active
                       ? "bg-marrom text-white border-marrom"
-                      : "bg-themePillLight text-marrom border-cinzaEscuro hover:bg-creme"}
+                      : "bg-creme text-marrom border-cinzaEscuro hover:bg-creme"}
                     dark:${
                       active
                         ? "bg-white text-marrom border-marrom"
